@@ -1,9 +1,6 @@
 <template>
   <div class="text-center p-6 max-w-1024px mx-auto">
-    <h1 class="font-bold text-3xl">Stable Diffusion 法术解析</h1>
-    <p class="text-gray-500 my-2 text-sm">
-      从 Stable Diffusion 生成的图片读取 prompt / Stable Diffusion 模型解析
-    </p>
+    <h1 class="font-bold text-3xl">Stable Diffusion 图片/模型 解析</h1>
     <div v-if="imgFileRef" class="my-6">
       <div class="bg-white max-w-720px mx-auto border border-gray-300 p-2" v-if="imageRef">
         <img v-if="imageRef" v-bind="imageRef" alt="" style="display: block; width: auto; height: 30vh; margin:auto" />
@@ -71,28 +68,6 @@
           <json-viewer :value="jsonData" v-if="item.k == 'Info'" :expand-depth=4></json-viewer>
         </div>
       </div>
-      <div class="my-4 pt-4">
-        <a class="text-gray-500" href="https://www.bilibili.com/read/cv21362202" target="_blank">图文详解！最全模型用法</a>
-      </div>
-    </div>
-
-    <p class="text-gray-500 my-2 text-sm">
-      *运算完全在你的设备上运行不会上传到云端
-    </p>
-    <div class="my-4 pt-4">
-      如果您觉得本项目对您有帮助 请在 →
-      <a class="inline-block text-sm text-gray-500"
-        href="https://github.com/Akegarasu/stable-diffusion-inspector">GitHub</a>
-      ←上点个star
-      <br />
-      <span class="inline-block mt-2 text-sm text-gray-500">
-        Made with ❤️ by
-        <a class="text-gray-500" href="https://github.com/Akegarasu">@Akegarasu</a>
-        <a> | </a>
-        <a class="text-gray-500" href="https://space.bilibili.com/12566101">秋葉aaaki</a>
-        <a> | </a>
-        <a class="text-gray-500" href="https://novelai.dev">NovelAI.Dev</a>
-      </span>
     </div>
   </div>
 </template>
