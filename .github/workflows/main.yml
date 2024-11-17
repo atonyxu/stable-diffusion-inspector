@@ -21,17 +21,15 @@ jobs:
             arch: linux-x64
 
     steps:
-      - uses: actions/checkout@v2.3.1
-        with:
-          ref: master
-
       - name: Build
         run: |
+          git clone atonyxu/stable-diffusion-inspector
+          cd stable-diffusion-inspector
           npm install vite
           npm run build
 
       - name: compress package
-        run: 7z a output.zip ./dist/*
+        run: 7z a output.zip ./stable-diffusion-inspector/dist/*
 
       - name: Upload package
         uses: actions/upload-artifact@v4
